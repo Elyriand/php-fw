@@ -5,7 +5,7 @@
 
 namespace Metinet\Domain;
 
-class Student implements User
+class Student
 {
     private $firstName;
     private $lastName;
@@ -62,16 +62,5 @@ class Student implements User
     public function getSponsor(): ?self
     {
         return $this->sponsor;
-    }
-
-    public function createConference($id,$nom,$description,$objectif,$salle,$date,$creneauHoraire): Conference
-    {
-        $evenement = new Conference($id,$nom,$description,$objectif,$salle,$date,$creneauHoraire,$this);
-        return $evenement;
-    }
-
-    public function canparticipate()
-    {
-        return true;
     }
 }
