@@ -8,6 +8,12 @@
     "layoutPath": "../src/Metinet/Resources/views/layout.html.php",
     "viewsDirectory": "../src/Metinet/Resources/views/"
   },
+  "database": {
+    "host": "192.168.33.10",
+    "name": "metinet",
+    "user": "root",
+    "password": ""
+  },
   "routes": {
     "homepage": {
       "path": "/",
@@ -60,6 +66,11 @@
       "path": "/logout",
       "methods": ["GET"],
       "action": "Metinet:Controllers:SecurityController::logout"
+    },
+    "member_sign_up": {
+      "path": "/members/sign-up",
+      "methods": ["GET", "POST"],
+      "action": "Metinet:Controllers:MembersController::signUp"
     }
   }
 }
